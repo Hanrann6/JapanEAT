@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import colors from "../color";
 
 export const Header = styled.header`
   display: flex;
@@ -9,7 +10,7 @@ export const Header = styled.header`
 `;
 
 export const Title = styled.h1`
-  font-size: 24px;
+  font-size: 30px;
   font-weight: bold;
   margin: 0;
 `;
@@ -21,7 +22,7 @@ export const BackButton = styled.button`
   font-size: 30px;
   background: none;
   border: none;
-  color: black;
+  color: ${colors.pink2}
   cursor: pointer;
 
   &:hover {
@@ -40,11 +41,20 @@ export const Button = styled.button`
   padding: 8px 16px;
   font-size: 16px;
   cursor: pointer;
-  border: 1px solid #ddd;
-  background-color: white;
-  border-radius: 4px;
+  border: 4px solid ${colors.pink3};
+  background-color: ${colors.pink2};
+  border-radius: 15px;
 
   &:hover {
-    background-color: #f0f0f0;
+    background-color: ${colors.pink1};
   }
+`;
+
+export const CalendarButton = styled.button`
+  margin-left: 10px;
+  cursor: pointer;
+  font-size: 18px;
+  border: 4px solid ${colors.pink3};
+  border-radius: 5px;
+  background-color: ${colors.pink1};
 `;

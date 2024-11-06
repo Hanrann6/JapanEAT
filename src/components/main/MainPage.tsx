@@ -16,6 +16,11 @@ export const MainPage: React.FC = () => {
     navigate("/calendar"); // /calendar 경로로 이동
   };
 
+  const handleSaveClick = () => {
+    navigate("/calendar");
+    alert("오늘의 기록이 저장되었습니다!");
+  };
+
   const handleReset = () => {
     setMealCount(0);
     setSnack("X");
@@ -29,7 +34,6 @@ export const MainPage: React.FC = () => {
       <NavBar />
       <S.DateSection>
         <S.DateText>2024/11/04</S.DateText>
-        <S.CalendarButton onClick={handleCalendarClick}>📅</S.CalendarButton>
       </S.DateSection>
 
       <S.MealSection>
@@ -90,7 +94,7 @@ export const MainPage: React.FC = () => {
 
       <S.ButtonSection>
         <S.ResetButton onClick={handleReset}>초기화</S.ResetButton>
-        <S.SaveButton>저장</S.SaveButton>
+        <S.SaveButton onClick={handleSaveClick}>저장</S.SaveButton>
       </S.ButtonSection>
     </S.Container>
   );

@@ -9,6 +9,10 @@ export const NavBar: React.FC = () => {
     navigate(-1); // 뒤로가기 기능
   };
 
+  const handleMyPageClick = () => {
+    navigate("/mypage");
+  };
+
   const handleLoginClick = () => {
     navigate("/login"); // login 경로로 이동
   };
@@ -17,11 +21,17 @@ export const NavBar: React.FC = () => {
     navigate("/signUp"); // /signUp 경로로 이동
   };
 
+  const handleCalendarClick = () => {
+    navigate("/calendar"); // /calendar 경로로 이동
+  };
+
   return (
     <S.Header>
-      <S.BackButton onClick={handleBack}>← </S.BackButton>
+      <S.BackButton onClick={handleBack}>⬅️</S.BackButton>
       <S.Title>JapanEAT</S.Title>
       <S.ButtonContainer>
+        <S.CalendarButton onClick={handleMyPageClick}>🐷</S.CalendarButton>
+        <S.CalendarButton onClick={handleCalendarClick}>📅</S.CalendarButton>
         <S.Button onClick={handleLoginClick}>로그인</S.Button>
         <S.Button onClick={handleSignUpClick}>회원가입</S.Button>
       </S.ButtonContainer>

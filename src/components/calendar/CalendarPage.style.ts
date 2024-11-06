@@ -1,10 +1,13 @@
 import styled from "styled-components";
+import colors from "../color";
 
 export const Container = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
   padding: 20px;
+  background-color: ${colors.pink1};
+  color: ${colors.pink2};
 `;
 
 export const MonthSection = styled.div`
@@ -22,6 +25,9 @@ export const MonthLabel = styled.span`
 export const ArrowButton = styled.button`
   font-size: 18px;
   cursor: pointer;
+  color: ${colors.pink2};
+  background-color: ${colors.pink1};
+  border: none;
 `;
 
 export const CalendarGrid = styled.div`
@@ -36,11 +42,12 @@ export const DateButton = styled.button`
   height: 40px;
   font-size: 16px;
   cursor: pointer;
-  border: 1px solid #ddd;
+  border: 4px solid ${colors.pink3};
+  border-radius: 5px;
   background-color: white;
 
   &:hover {
-    background-color: #f0f0f0;
+    background-color: ${colors.pink3};
   }
 `;
 
@@ -48,8 +55,9 @@ export const FooterButton = styled.button`
   margin-top: 20px;
   padding: 10px 20px;
   font-size: 16px;
-  background-color: #28a745;
+  background-color: ${colors.pink2};
   color: white;
-  border: none;
+  border: 5px solid ${colors.pink3};
+  border-radius: 15px;
   cursor: pointer;
 `;

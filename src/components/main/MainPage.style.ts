@@ -1,10 +1,13 @@
 import styled, { css } from "styled-components";
+import colors from "../color";
 
 export const Container = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
   padding: 20px;
+  background-color: ${colors.pink1};
+  color: ${colors.pink2};
 `;
 
 export const DateSection = styled.div`
@@ -14,13 +17,7 @@ export const DateSection = styled.div`
 `;
 
 export const DateText = styled.span`
-  font-size: 18px;
-`;
-
-export const CalendarButton = styled.button`
-  margin-left: 10px;
-  cursor: pointer;
-  font-size: 18px;
+  font-size: 20px;
 `;
 
 export const MealSection = styled.div`
@@ -42,6 +39,10 @@ export const MealControl = styled.div`
 export const ControlButton = styled.button`
   font-size: 18px;
   cursor: pointer;
+  color: pink;
+  border: 4px solid ${colors.pink3};
+  border-radius: 5px;
+  background-color: ${colors.pink1};
 `;
 
 export const SnackSection = styled.div`
@@ -56,11 +57,15 @@ export const SnackButton = styled.button<{ selected: boolean }>`
   ${({ selected }) =>
     selected
       ? css`
-          background-color: #007bff;
-          color: white;
+          border: 4px solid ${colors.pink3};
+          border-radius: 5px;
+          background-color: ${colors.pink3};
+          color: black;
         `
       : css`
-          background-color: #f0f0f0;
+          border: 4px solid ${colors.pink3};
+          border-radius: 5px;
+          background-color: ${colors.pink1};
           color: black;
         `}
 `;
@@ -91,10 +96,14 @@ export const MoodButton = styled.button<{ selected: boolean }>`
   ${({ selected }) =>
     selected
       ? css`
-          background-color: #ffcc00;
+          border: 4px solid ${colors.pink3};
+          border-radius: 5px;
+          background-color: ${colors.pink3};
         `
       : css`
-          background-color: #f0f0f0;
+          border: 4px solid ${colors.pink3};
+          border-radius: 5px;
+          background-color: ${colors.pink1};
         `}
 `;
 
